@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "pytorch-training"
+version = "0.1.0"
+description = ""
+authors = ["showee <sho1.0221k@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pytorch_training"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.0.3"
+numpy = "^1.25.1"
+matplotlib = "^3.7.2"
+seaborn = "^0.12.2"
+torch = [
+    { version = ">=1.13+cpu", markers = "sys_platform == 'darwin'" },
+]
+scipy = "^1.11.1"
+scikit-learn = "^1.5.1"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+ipykernel = "^6.24.0"
+tqdm = "^4.65.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
